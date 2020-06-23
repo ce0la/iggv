@@ -2,12 +2,6 @@ pipeline {
   agent any
   stages{
     stage('Main CI stage') {
-      when {
-        anyOf {
-          branch 'dev'
-          branch 'master'
-        }
-      }
       steps {
         // stop running kestrel service
         sh ("sudo systemctl stop kestJen.service")
