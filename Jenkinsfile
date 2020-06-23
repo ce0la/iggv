@@ -14,6 +14,7 @@ pipeline {
         // restart nginx service
         sh ("sudo service nginx start")
         // startup dotnet webapp
+        sh ("cd /home/ubuntu/Documents/iggv")
         sh ("dotnet run & exit")
       }
     }
