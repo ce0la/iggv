@@ -15,7 +15,7 @@ pipeline {
         sh ("sudo service nginx start")
       }
     }
-    // 
+    
     // stage('') {
     //   when {
     //     anyOf {
