@@ -13,8 +13,9 @@ pipeline {
         sh ("sudo systemctl start kestJen.service")
         // restart nginx service
         sh ("sudo service nginx start")
-        // startup dotnet webapp
+        // switch to workdir
         sh ("cd /home/ubuntu/Documents/iggv")
+        // startup dotnet webapp
         sh ("dotnet run & exit")
       }
     }
